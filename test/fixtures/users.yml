@@ -1,17 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  Name: MyText
-  Photo: MyText
-  Bio: MyText
-  UpdatedAt: 2022-08-30
-  CreatedAt: 2022-08-30
-  PostsCounter: 1
+  name: MyString
+  photo: MyString
+  bio: MyText
+  post_counter: 1
 
 two:
-  Name: MyText
-  Photo: MyText
-  Bio: MyText
-  UpdatedAt: 2022-08-30
-  CreatedAt: 2022-08-30
-  PostsCounter: 1
+  name: MyString
+  photo: MyString
+  bio: MyText
+  post_counter: 1
