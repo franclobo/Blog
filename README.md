@@ -12,6 +12,10 @@ The Blog app will be a classic example of a blog website. I will create a fully 
 
 I will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
+## Instalation
+- [Clone repository](git@github.com:franclobo/Blog.git).
+- Enter `rails s` in terminal to run the server in the browser.
+
 ## Author
 
 ## 👤 Francisco Borja
