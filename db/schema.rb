@@ -37,8 +37,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_015200) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "text"
-    t.string "comments_counter"
-    t.string "likes_counter"
+    t.integer "comments_counter"
+    t.integer "likes_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
@@ -52,7 +52,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_015200) do
     t.integer "post_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_users_on_name"
   end
 
   add_foreign_key "comments", "posts"
