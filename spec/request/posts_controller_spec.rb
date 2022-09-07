@@ -10,12 +10,12 @@ RSpec.describe 'Posts', type: :request do
   end
   describe 'GET /posts' do
     it 'assigns all posts to @posts' do
-      get "/users/1/posts"
+      get '/users/1/posts'
       expect(assigns(:posts)).to eq(Post.all)
     end
   end
   describe 'GET #index' do
-    before(:example) { get "/users/1/posts" } # get(:index)
+    before(:example) { get '/users/1/posts' } # get(:index)
     it 'it is a success' do
       expect(response).to have_http_status(:success)
     end
@@ -25,7 +25,7 @@ RSpec.describe 'Posts', type: :request do
   end
   describe 'GET #show' do
     it 'renders the show template' do
-      get "/users/1/posts/1"
+      get '/users/1/posts/1'
       expect(response).to render_template(:show)
     end
   end
