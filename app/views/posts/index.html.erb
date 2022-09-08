@@ -7,42 +7,33 @@
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title"><%= @user.name %></h5>
-          <p class="card-text"><small class="text-muted">Number of posts: <%= @user.post_counter%></small></p>
+          <p class="card-text"><small class="text-muted">Number of posts: <%= @user.posts_counter%></small></p>
         </div>
       </div>
     </div>
   </div>
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="card-body">
-      <h5 class="card-title">Hello</h5>
-      <p class="card-text"><small class="text-muted">This is my first post</small></p>
-      <p class="card-text"><small class="text-muted">Comment: 1, Likes: 1</small></p>
+  <% @posts.each do |post| %>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to  post.title, [@user, post] %></h5>
+        <p class="card-text"><small class="text-muted"><%= post.text %></small></p>
+        <p class="card-text"><small class="text-muted">
+        Comment: <%= post.comments_counter %>,
+        Likes: <%= post.likes_counter %>
+        </small></p>
+      </div>
     </div>
-  </div>
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="card-body">
-      <p class="card-text"><small class="text-muted">Lilly: Hi Tom!</small></p>
-      <p class="card-text"><small class="text-muted">Username: Comment 2</small></p>
-      <p class="card-text"><small class="text-muted">Username: Comment 3</small></p>
-      <p class="card-text"><small class="text-muted">Username: Comment 4</small></p>
-      <p class="card-text"><small class="text-muted">Username: Comment 5</small></p>
+    <div class="card mb-3" style="max-width: 540px;">
+      <% post.comments.take(5).each do |comment| %>
+        <div class="card-body">
+          <p class="card-text">
+            <small class="text-muted">
+              <%= comment.author.name %>: <%= comment.text %>
+            </small>
+          </p>
+        </div>
+      <% end %>
     </div>
-  </div>
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="card-body">
-      <h5 class="card-title">POST #2</h5>
-      <p class="card-text"><small class="text-muted">Lorem ipsum</small></p>
-      <p class="card-text"><small class="text-muted">Comment: x, Likes: y</small></p>
-    </div>
-  </div>
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="card-body">
-      <p class="card-text"><small class="text-muted">Username: Comment 1</small></p>
-      <p class="card-text"><small class="text-muted">Username: Comment 2</small></p>
-      <p class="card-text"><small class="text-muted">Username: Comment 3</small></p>
-      <p class="card-text"><small class="text-muted">Username: Comment 4</small></p>
-      <p class="card-text"><small class="text-muted">Username: Comment 5</small></p>
-    </div>
-  </div>
+  <% end %>
   <button type="button" class="btn btn-primary d-grid gap-2 mx-auto">Pagination</button>
 </div>
