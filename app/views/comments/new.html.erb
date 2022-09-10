@@ -1,0 +1,5 @@
+<h1>Add comment</h1>
+<%= bootsatrp_form_with model: [:user, :post, @comment] do |form| %>
+  <%= form.text_area :text, rows: 10 %>
+  <%= form.submit %>
+<% end %>

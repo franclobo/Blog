@@ -1,0 +1,6 @@
+<h1>Add a new Post</h1>
+<%= bootstrap_form_with model: @post do |form| %>
+  <%= form.text_field :title %>
+  <%= form.text_area :text, rows: 10 %>
+  <%= form.submit %>
+<% end %>

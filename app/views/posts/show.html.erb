@@ -10,8 +10,23 @@
       </p>
       <p class="card-text"><small class="text-muted"><%= @post.text %></small></p>
     </div>
+    <% if !@is_liked %>
+      <%= bootstrap_form_with url: user_post_likes_url(@post.author, @post) do |form| %>
+        <%= button_tag do  %>
+          Like
+        <% end %>
+      <% end %>
+    <% else%>
+      <%= form_with url: user_post_like_url(@post.author, @post), method: :delete do |form| %>
+        <%= button_tag do  %>
+          Unike
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
   <div class="card mb-3" style="max-width: 540px;">
+  <h4 class="card-body">Comments:</h4>
+  <p class="card-body"><%= link_to 'Add Comment', user_post_comment_path(@post.author, @post) %></p>
     <% @comments.each do |comment| %>
       <div class="card-body">
         <p class="card-text">

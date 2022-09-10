@@ -14,6 +14,10 @@ class Post < ApplicationRecord
 
   after_save :update_post_counter
 
+  def liked?(user)
+    likes.where(user_id: user).any?
+  end
+
   private
 
   def update_post_counter
