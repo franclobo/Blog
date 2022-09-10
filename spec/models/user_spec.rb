@@ -1,6 +1,6 @@
 require 'rails_helper'
 RSpec.describe User, type: :model do
-  subject { User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.', post_counter: 1) }
+  subject { User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.') }
   before { subject.save }
 
   it 'is valid with the correct attributes' do
@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'post counter is greater than or equal to 0' do
-    subject.post_counter = -1
+    subject.posts_counter = -1
     expect(subject).to_not be_valid
   end
 end

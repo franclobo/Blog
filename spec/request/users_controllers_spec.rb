@@ -4,7 +4,7 @@ RSpec.describe 'Users', type: :request do
   before(:all) do
     User.destroy_all
     @user = User.create(id: 1, name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                        bio: 'Teacher from Mexico.', post_counter: 1)
+                        bio: 'Teacher from Mexico.')
   end
   describe 'GET #index' do
     before(:example) { get users_path } # get(:index)
