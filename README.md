@@ -26,6 +26,20 @@ I will create a fully functional website that will show the list of posts and em
 
 - LinkedIn: [Francisco Borja](https://www.linkedin.com/in/francisco-borja-lobato/)
 
+## 👤 Andres Garzon Maldonado
+
+- Github: [@andgarzonmal](https://github.com/Gopxfs)
+
+- Linkedin: [Andres](https://www.linkedin.com/in/gabriel-fonseca-sales-8bb64b236/)
+
+## 👤 Gonzalo A. Medina
+
+- GitHub: [@mgmediaweb](https://github.com/mgmediaweb)
+
+- Twitter: [@GonzoMedinaDev](https://twitter.com/GonzoMedinaDev)
+
+- LinkedIn: [gonzalo-medina-g](https://www.linkedin.com/in/gonzalo-medina-g/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
