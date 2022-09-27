@@ -10,4 +10,21 @@ describe 'Users', type: :feature do
     visit '/users'
     expect(page).to have_content('Tom')
   end
+  it 'should have a user name' do
+    visit '/users/1'
+    expect(page).to have_content('Tom')
+  end
+  it 'should have a user photo' do
+    visit '/users/1'
+    expect(page).to have_css('img')
+  end
+  it 'I can see the number of posts' do
+    visit '/users/1'
+    expect(page).to have_content('0')
+  end
+  it 'When I click on the user name, I am redirected to the user page' do
+    visit '/users'
+    click_link('Tom')
+    expect(page).to have_content('Tom')
+  end
 end
