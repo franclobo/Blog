@@ -10,11 +10,14 @@ The Blog app will be a classic example of a blog website. I will create a fully 
 
 ## Getting Started
 
-I will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
-
-## Instalation
 - [Clone repository](git@github.com:franclobo/Blog.git).
+- Run `bundle install`
 - Enter `rails s` in terminal to run the server in the browser.
+
+### To run tests
+
+- Run `rspec`
+
 
 ## Author
 
@@ -28,9 +31,9 @@ I will create a fully functional website that will show the list of posts and em
 
 ## 👤 Andres Garzon Maldonado
 
-- Github: [@andgarzonmal](https://github.com/Gopxfs)
+- Github: [@andgarzonmal](https://github.com/andgarzonmal)
 
-- Linkedin: [Andres](https://www.linkedin.com/in/gabriel-fonseca-sales-8bb64b236/)
+- Linkedin: [Andres](https://www.linkedin.com/in/andres-garzon-maldonado/)
 
 ## 👤 Gonzalo A. Medina
 
