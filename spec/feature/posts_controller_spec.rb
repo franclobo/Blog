@@ -1,4 +1,5 @@
 require 'rails_helper'
+# check testing
 describe 'Posts', type: :feature do
   before(:all) do
     User.destroy_all
