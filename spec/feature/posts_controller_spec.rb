@@ -33,7 +33,7 @@ describe 'Posts', type: :feature do
   end
   it 'I can see the first comment' do
     visit '/users/1/posts'
-    expect(page).to have_content('No comments yet')
+    expect(page).to have_content('Hi, Tom!')
   end
   it 'I can see the number of comments' do
     visit '/users/1/posts'
@@ -47,5 +47,35 @@ describe 'Posts', type: :feature do
     visit '/users/1/posts'
     click_link('Hello')
     expect(page).to have_content('Hello')
+  end
+  describe 'GET #show' do
+    it 'I can see the post title' do
+      visit '/users/1/posts/1'
+      expect(page).to have_content('Hello')
+    end
+    it 'I can see the post author' do
+      visit '/users/1/posts/1'
+      expect(page).to have_content('Tom')
+    end
+    it 'I can see how many comments the post has' do
+      visit '/users/1/posts/1'
+      expect(page).to have_content('0')
+    end
+    it 'I can see how many likes the post has' do
+      visit '/users/1/posts/1'
+      expect(page).to have_content('0')
+    end
+    it 'I can see the post text' do
+      visit '/users/1/posts/1'
+      expect(page).to have_content('This is my first post')
+    end
+    it 'I can see the username of the comment author' do
+      visit '/users/1/posts/1'
+      expect(page).to have_content('Tom')
+    end
+    it 'I acn see the comment text' do
+      visit '/users/1/posts/1'
+      expect(page).to have_content('Hi, Tom!')
+    end
   end
 end
