@@ -21,14 +21,4 @@ RSpec.describe 'Posts', type: :request do
       expect(response.body).to include('Tom')
     end
   end
-  describe 'GET #show' do
-    it 'renders the show template' do
-      get '/users/1/posts/1'
-      expect(response).to render_template(:show)
-    end
-    it 'should have a title' do
-      get '/users/1/posts/1'
-      expect(response.body).to include('Hello')
-    end
-  end
 end

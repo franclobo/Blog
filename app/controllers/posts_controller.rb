@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @comments = @post.comments
+    @comments = @post.comments.includes([:author])
     @is_liked = @post.liked?(current_user)
   end
 
