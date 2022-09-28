@@ -15,7 +15,7 @@ class User < ApplicationRecord
     posts.order('created_at Desc').limit(3)
   end
 
-  #def update
-  #  self.photo = 'https://cdn-icons-png.flaticon.com/512/599/599305.png'
-  #end
+  def update
+    self.photo = 'https://cdn-icons-png.flaticon.com/512/599/599305.png'
+  end
 end
