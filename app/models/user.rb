@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy, foreign_key: 'user_id'
 
   # app/models/user.rb
-  #after_initialize :update
+  # after_initialize :update
   def recent_post
     posts.order('created_at Desc').limit(3)
   end
