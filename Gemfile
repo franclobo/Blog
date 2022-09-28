@@ -83,3 +83,4 @@ end
 
 gem 'cssbundling-rails'
 gem 'lorem_ipsum_amet', '~> 0.6.2'
+gem 'cancancan'
